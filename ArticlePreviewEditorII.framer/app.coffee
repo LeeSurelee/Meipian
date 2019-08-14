@@ -135,8 +135,8 @@ for layer,i in BtmNavi
 ContentScroll = ScrollComponent.wrap(Content)
 ContentScroll.scrollHorizontal = false
 ContentScroll.contentInset =
-	bottom: 400
-ContentScroll.on Events.ScrollStart, (event,layer) ->
+	bottom: 300
+ContentScroll.on Events.SwipeUpEnd, (event,layer) ->
 	PopupBtmNavi1.stateCycle('close')
 	PopupBtmNavi2.stateCycle('close')
 	PopupBtmNavi3.stateCycle('close')
@@ -146,31 +146,31 @@ ContentScroll.on Events.ScrollStart, (event,layer) ->
 	open_1.stateCycle('fold')
 	close_1.stateCycle('fold')
 	
-# ContentScroll.on Events.ScrollEnd, (event,layer) ->
-# 	if BtmNaviState == 1
-# 		PopupBtmNavi1.stateCycle('open')
-# 		Collapse.stateCycle('unfold1')
-# 		CollapseIcon.stateCycle('unfold')
-# 		open_1.stateCycle('unfold')
-# 		close_1.stateCycle('unfold')
-# 	if BtmNaviState == 2
-# 		PopupBtmNavi2.stateCycle('open')
-# 		Collapse.stateCycle('unfold2')
-# 		CollapseIcon.stateCycle('unfold')
-# 		open_1.stateCycle('unfold')
-# 		close_1.stateCycle('unfold')
-# 	if BtmNaviState == 3
-# 		PopupBtmNavi3.stateCycle('open')
-# 		Collapse.stateCycle('unfold3')
-# 		CollapseIcon.stateCycle('unfold')
-# 		open_1.stateCycle('unfold')
-# 		close_1.stateCycle('unfold')
-# 	if BtmNaviState == 4
-# 		PopupBtmNavi4.stateCycle('open')
-# 		Collapse.stateCycle('unfold4')
-# 		CollapseIcon.stateCycle('unfold')
-# 		open_1.stateCycle('unfold')
-# 		close_1.stateCycle('unfold')
+ContentScroll.on Events.SwipeDownEnd, (event,layer) ->
+	if BtmNaviState == 1
+		PopupBtmNavi1.stateCycle('open')
+		Collapse.stateCycle('unfold1')
+		CollapseIcon.stateCycle('unfold')
+		open_1.stateCycle('unfold')
+		close_1.stateCycle('unfold')
+	if BtmNaviState == 2
+		PopupBtmNavi2.stateCycle('open')
+		Collapse.stateCycle('unfold2')
+		CollapseIcon.stateCycle('unfold')
+		open_1.stateCycle('unfold')
+		close_1.stateCycle('unfold')
+	if BtmNaviState == 3
+		PopupBtmNavi3.stateCycle('open')
+		Collapse.stateCycle('unfold3')
+		CollapseIcon.stateCycle('unfold')
+		open_1.stateCycle('unfold')
+		close_1.stateCycle('unfold')
+	if BtmNaviState == 4
+		PopupBtmNavi4.stateCycle('open')
+		Collapse.stateCycle('unfold4')
+		CollapseIcon.stateCycle('unfold')
+		open_1.stateCycle('unfold')
+		close_1.stateCycle('unfold')
 
 #收起按钮点击状态设置
 Collapse.onClick ->
