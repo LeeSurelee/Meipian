@@ -196,6 +196,7 @@ Collapse.onClick ->
 
 #收藏按钮设置
 ch = []
+mu = []
 for i in [0..6]
 	clicktimes = 0
 	layer = Master.copy()
@@ -241,6 +242,11 @@ for i in [0..6]
 	music.parent = layer
 	music.x = 0
 	music.y = -6.5
+	mu.push music
+	for layer in mu
+		munum = i
+		if munum == 1 or munum == 3 or munum == 4 or munum == 5 or munum == 6
+			mu[munum].opacity = 0
 
 
 #音乐层滚动设置
