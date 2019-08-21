@@ -218,7 +218,7 @@ for i in [0..6]
 	check.onClick ->
 		for layer in ch
 			layer.stateCycle('no')
-			@.stateCycle('yes')
+			@.stateCycle('yes','no’)
 			clicktimes += 1
 			if clicktimes == 1
 				Toast.stateCycle('yes')
