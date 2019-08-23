@@ -20,8 +20,6 @@ BtmNaviState = 1
 open_1.opacity = 0
 collectIcon2.opacity = 0
 
-
-
 #折叠状态设置
 CollapseIcon.states =
 	fold:
@@ -51,6 +49,14 @@ close_1.states =
 		opacity: 0
 	unfold:
 		opacity: 1
+
+#Toast提示
+Toast.states =
+	yes:
+		opacity: 1
+	no:
+		opacity: 0
+Toast.stateSwitch('no')
 
 #底导点击状态设置
 for layer in pics
@@ -133,14 +139,6 @@ for layer,i in BtmNavi
 				open_1.stateCycle('unfold')
 				close_1.stateCycle('unfold')
 
-#Toast提示
-Toast.states =
-	yes:
-		opacity: 1
-	no:
-		opacity: 0
-Toast.stateSwitch('no')
-
 #内容滑动收起
 ContentScroll = ScrollComponent.wrap(Content)
 ContentScroll.scrollHorizontal = false
@@ -215,16 +213,16 @@ for i in [0..6]
 		no:
 			opacity: 0
 	check.stateSwitch('no')
+	ch.push check
 	check.onClick ->
+		clicktimes += 1
 		for layer in ch
 			layer.stateCycle('no')
-			@.stateCycle('yes','no’)
-			clicktimes += 1
-			if clicktimes == 1
-				Toast.stateCycle('yes')
-				Utils.delay 2.5,->
-					Toast.stateCycle('no')
-	ch.push check
+			@stateCycle('yes','no')
+		if clicktimes == 1
+			Toast.stateCycle('yes')
+			Utils.delay 2.5, ->
+				Toast.stateCycle('no')
 	star = collect.copy()
 	star.parent = layer
 	star.x = 42
@@ -237,7 +235,7 @@ for i in [0..6]
 			opacity: 0
 			scale: 1
 	star.onClick ->
-		@.subLayersByName("collectIcon2")[0].stateCycle('yes','no)
+		@.subLayersByName("collectIcon2")[0].stateCycle('yes','no')
 	music = Music.copy()
 	music.parent = layer
 	music.x = 0
@@ -247,7 +245,6 @@ for i in [0..6]
 		munum = i
 		if munum == 1 or munum == 3 or munum == 4 or munum == 5 or munum == 6
 			mu[munum].opacity = 0
-
 
 #音乐层滚动设置
 for i in [0..6]
@@ -300,3 +297,5 @@ PopupBtmNavi4.states =
 	close:
 		y: 667 - PopupY
 PopupBtmNavi4.stateSwitch('close')
+
+
