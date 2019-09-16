@@ -103,10 +103,12 @@ Mask.onClick ->
 cttScroll = ScrollComponent.wrap(contentScroll)
 cttScroll.scrollHorizontal = false
 cttScroll.contentInset = bottom: 100
+cttScroll.mouseWheelEnabled = true
 
 pkgScroll = ScrollComponent.wrap(packageScroll)
 pkgScroll.scrollVertical = false
 pkgScroll.contentInset = left: 16, right: 16
+pkgScroll.mouseWheelEnabled = true
 
 cttScroll.directionLock = true
 pkgScroll.directionLock = true
