@@ -59,14 +59,14 @@ more.stateSwitch('off')
 
 vip.states =
 	on:
-		height: 184
+		height: 184 - 30
 	off:
 		height: 87
 vip.stateSwitch('off')
 
 vipdscrpt.states =
 	on:
-		y: 195
+		y: 195 - 30
 	off:
 		y:102
 vipdscrpt.stateSwitch('off')
