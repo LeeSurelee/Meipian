@@ -1,12 +1,25 @@
 Framer.Defaults.Animation =
-	time: 0.3
-	curve: Spring(damping:.9)
+	time: 0.2
+	curve: Bezier(.42,0,.58,1)
+# 	curve: Bezier.easeInOut
 
 home.props =
 	width: 375
 	height: 667
 	x: Align.center
 	y: Align.center
+
+universal.states =
+	a:
+		y: 33
+	b:
+		y: -81
+universal.stateSwitch('b')
+
+animation.onClick ->
+	universal.stateCycle('a',curve:Spring(damping: 0.8),time: 0.3)
+	Utils.delay 10,->
+		universal.stateCycle('b',curve:Spring(damping: 0.8),time: 0.3)
 
 vippackage = [one, two, three, four]
 pic = [portrait]
