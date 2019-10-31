@@ -13254,7 +13254,7 @@
             "brightness" : 100,
             "brightnessEnabled" : 0,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.81409295352323841,
+            "centerAnchorY" : 0.79910044977511241,
             "children" : [
               {
                 "__class" : "PathNode",
@@ -13346,7 +13346,7 @@
                 "visible" : true,
                 "width" : 375,
                 "x" : 0,
-                "y" : 0
+                "y" : 8
               },
               {
                 "__class" : "FrameNode",
@@ -13460,7 +13460,7 @@
             "fillType" : "color",
             "grayscale" : 0,
             "grayScaleEnabled" : 0,
-            "height" : 248,
+            "height" : 268,
             "heightFactor" : null,
             "hueRotate" : 0,
             "hueRotateEnabled" : 0,

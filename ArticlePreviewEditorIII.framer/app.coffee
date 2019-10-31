@@ -278,13 +278,14 @@ PopupBtmNavi3.stateSwitch('close')
 
 PopupBtmNavi4.states =
 	open:
-		y: 419
+		y: 399
 	close:
 		y: 667 - PopupY
 PopupBtmNavi4.stateSwitch('close')
 
 TypeScroll = ScrollComponent.wrap(typeScroll)
 TypeScroll.scrollHorizontal = false
+TypeScroll.mouseWheelEnabled = true
 TypeScroll.height = PopupBtmNavi4.height
 TypeScroll.parent = PopupBtmNavi4
 TypeScroll.contentInset = 
