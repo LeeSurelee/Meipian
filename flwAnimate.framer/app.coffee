@@ -1,4 +1,8 @@
-
+home.props =
+	width: 375
+	height: 667
+	x: Align.center
+	y: Align.center
 Framer.Defaults.Animation =
 	time: 0.3
 	curve: Spring(damping: 0.9)
@@ -19,14 +23,14 @@ portraitsGroup.clip = true
 
 chose.states =
 	hide:
-		y: Screen.height
+		y: 667
 	show:
-		y: Screen.height - chose.height
+		y: 667 - chose.height
 payment.states =
 	hide:
-		y: Screen.height
+		y: 667
 	show:
-		y: Screen.height - payment.height
+		y: 667 - payment.height
 		
 mask1.states =
 	hide:
@@ -108,7 +112,7 @@ flws =->
 				layer = portrait1.copy()
 				layer.parent = portraitsGroup
 				layer.image = Utils.randomImage()
-				layer.borderWidth = 1
+				layer.borderWidth = 1.5
 				layer.borderColor = "#E49C28"
 				layer.x = 0
 				layer.y = 0

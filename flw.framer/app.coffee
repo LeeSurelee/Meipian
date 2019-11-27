@@ -1,3 +1,9 @@
+home.props =
+	width: 375
+	height: 667
+	x: Align.center
+	y: Align.center
+
 Framer.Defaults.Animation =
 	time: 0.3
 	curve: Bezier.easeIn
@@ -60,7 +66,6 @@ pp.onClick ->
 			time: 0.3
 flww()
 Utils.interval 18, ->
-	content.y = 0
 	flww()
 	pp.animate
 		opacity: 0

@@ -44889,9 +44889,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 43,
-                "widthFactor" : null,
-                "x" : 531,
-                "y" : 233
+                "widthFactor" : null
               },
               {
                 "__class" : "TextNode",
@@ -44985,6 +44983,15 @@
                       "type" : "unstyled"
                     }
                   ],
+                  "cached" : {
+                    "html" : "<span data-offset-key=\"8nsj8-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;PingFangSC-Regular&quot;, &quot;PingFang SC&quot;, serif;-webkit-text-fill-color:rgba(0, 0, 0, 0.85);font-size:15px;letter-spacing:0.1px;line-height:1.2\"><span data-text=\"true\">送出鲜花<\/span><\/span>",
+                    "os" : "10_15",
+                    "size" : {
+                      "height" : 18,
+                      "width" : 62
+                    },
+                    "width" : 0
+                  },
                   "entityMap" : {
 
                   }
@@ -44993,9 +45000,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 62,
-                "widthFactor" : null,
-                "x" : 36,
-                "y" : 25
+                "widthFactor" : null
               }
             ],
             "clip" : true,
