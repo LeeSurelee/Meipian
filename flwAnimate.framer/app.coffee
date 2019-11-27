@@ -37,12 +37,13 @@ mask1.states =
 		opacity: 0
 	show:
 		opacity: 1
+
 		
-mask2.states =
+faq.states =
 	hide:
-		opacity: 0
+		y: 667
 	show:
-		opacity: 1
+		y: 667 - payment.height
 
 flowerclick.onClick ->
 	mask1.placeBehind(chose)
@@ -50,15 +51,8 @@ flowerclick.onClick ->
 	chose.stateCycle('show')
 	
 confirm_1.onClick ->
-	mask2.placeBehind(payment)
-	mask2.stateCycle('show')
-	payment.stateCycle('show')
-
-pay.onClick ->
 	mask1.sendToBack()
-	mask2.sendToBack()
 	mask1.stateCycle('hide')
-	mask2.stateCycle('hide')
 	chose.stateCycle('hide')
 	payment.stateCycle('hide')
 	flws()
@@ -74,11 +68,7 @@ mask1.onClick ->
 	chose.stateCycle('hide')
 
 payment.onClick ->
-	mask2.sendToBack()
-	mask2.stateCycle('hide')
 	payment.stateCycle('hide')
-mask2.onClick ->
-
 
 flwAnimate.states =
 	hide:
@@ -89,7 +79,24 @@ flwAnimate.states =
 	dismiss:
 		y:48
 		opacity: 0
+		
+faqbtn.onClick ->
+	chose.stateCycle('hide')
+	mask.placeBehind(faq)
+	Utils.delay 0.2,->
+		faq.stateCycle('show')
 
+faqclose.onClick ->
+	faq.stateCycle('hide')
+	mask.sendToBack()
+	Utils.delay 0.2,->
+		chose.stateCycle('show')
+
+mask.onClick ->
+	faq.stateCycle('hide')
+	mask.sendToBack()
+	Utils.delay 0.2,->
+		chose.stateCycle('show')
 flwAnimate.stateSwitch('hide')
 flws =->
 	Utils.delay 0.5,->
