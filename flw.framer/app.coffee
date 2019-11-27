@@ -40,12 +40,12 @@ flww = ->
 			for layer in layers
 				layer.destroy()
 		
-	content.animate
-		y: -500
-		options: 
-			time: 5
-			delay: 2
-			curve: Bezier.linear
+# 	content.animate
+# 		y: -500
+# 		options: 
+# 			time: 5
+# 			delay: 2
+# 			curve: Bezier.linear
 pp.onClick ->
 	pp.animate
 		opacity: 0
