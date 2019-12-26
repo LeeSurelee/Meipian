@@ -9,11 +9,17 @@ Framer.Defaults.Animation =
 	curve: Bezier.easeIn
 layers = []
 pp.scale = 0
+lucky = 70
+luck.scale = 1.2
+
 
 flww = ->
-	n = Utils.randomNumber(50,100)
+	n = 100#Utils.randomNumber(50,100)
 	for i in [0..n]
-		layer = flw1.copy()
+		if i < lucky
+			layer = flw1.copy()
+		else if i >= lucky
+			layer = luck2.copy()
 		layer.x = Utils.randomNumber(-28,400)
 		layer.y = -flw.height - 10
 		layer.rotationZ = Utils.randomNumber(-90,90)
