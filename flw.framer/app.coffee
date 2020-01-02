@@ -19,7 +19,7 @@ flww = ->
 		if i < lucky
 			layer = flw1.copy()
 		else if i >= lucky
-			layer = luck2.copy()
+			layer = luck3.copy()
 		layer.x = Utils.randomNumber(-28,400)
 		layer.y = -flw.height - 10
 		layer.rotationZ = Utils.randomNumber(-90,90)
