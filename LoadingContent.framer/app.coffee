@@ -17,7 +17,60 @@ Framer.Defaults.Animation =
 # 	name: "customAnim"
 # 	path: "images/loading.json"
 
+Register = new LottieLayer
+	name: "Register"
+	path: "images/register2.json"
+	autoplay: false
+	parent: Navi
+	y: 12
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+Register.bringToFront()
 
+date = new TextLayer
+	text: Utils.randomChoice([29,28,31])
+	parent: Navi
+	fontSize: 12
+	x: 18
+	y: 35
+	fontFamily: "Pingfang SC"
+	color: "black"
+	fontWeight: 450
+
+Award = new LottieLayer
+	name: "Award"
+	path: "images/award.json"
+	autoplay: false
+	parent: Navi
+	y: 12
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+Award.bringToFront()
+
+Award.opacity = 0
+
+Utils.delay .3,->
+	Register.play()
+	Utils.delay 7.9, ->
+		Register.pause()
+		Utils.delay 3, ->
+			Register.opacity = 0
+			Award.opacity = 1
+			Utils.delay 1, ->
+				date.animate
+					opacity: 0
+				Utils.delay .3, ->
+					Award.play()
+					Utils.delay 7.9, ->
+			Award.pause()
 customAnim = new LottieLayer
 	name: "customAnim"
 	path: "images/loading.json"
@@ -37,35 +90,86 @@ Reset.onClick ->
 	content.height = Utils.randomNumber(55,551)
 	customAnim.y = Align.center
 
-# scroll_1.draggable.enabled = true
-# scroll_1.draggable.horizontal = false
-# scroll_1.draggable.overdrag = false
-# 
-# scroll_1.draggable.onDragMove ->
-# 	scroll_1.draggable.speedY = Utils.modulate(scroll_1.y, [0, refreshThreshold], [1, 0.1], true)
-# 	if scroll_1.y < headerHeight
-# 		scroll_1.y = headerHeight
-# scroll_1.draggable.onDragEnd ->
-# 	if scroll_1.draggable.offset.y < 0
-# 		return
-# 	scroll_1.draggable.speedY = 1
-# 	if scroll_1.y >= refreshThreshold
-# 		scroll_1.animate
-# 			y: refreshThreshold
-# 		customAnim.play()
-# 		Utils.delay Utils.randomNumber(1,3), ->
-# 			scroll_1.animate
-# 				y: headerHeight
-# 			soundRefresh.play()
-# 			Utils.delay 1, ->
-# 				customAnim.goToAndStop(0)
-# 	else
-# 		scroll_1.animate
-# 				y: headerHeight
-distance = 0
-# scroll_1.on "change:y" ,->
-# 	distance = scroll_1.y
-# # 	print distance
-# 	customAnim.opacity = Utils.modulate(distance, [startpoint, endpoint], [0,1], true)
-# 	customAnim.scale = Utils.modulate(distance, [startpoint, endpoint], [.6,1], true)
-# 	customAnim.y = Utils.modulate(distance, [startpoint, endpoint], [-85, 150], true)
+Allcompleted = new LottieLayer
+	name: "Allcompleted"
+	path: "images/allcompleted.json"
+	autoplay: true
+	parent: X
+	y: 80
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+
+
+award = new LottieLayer
+	name: "award"
+	path: "images/award.json"
+	autoplay: false
+	autoplay: true
+	parent: X
+	y: 145
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+	
+register = new LottieLayer
+	name: "register"
+	path: "images/register.json"
+	autoplay: false
+	autoplay: true
+	parent: X
+	y: 205
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+	
+dot = new LottieLayer
+	name: "dot"
+	path: "images/dot.json"
+	autoplay: false
+	autoplay: true
+	parent: X
+	y: 265
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+	
+award-withdot = new LottieLayer
+	name: "award-withdot"
+	path: "images/award-withdot.json"
+	autoplay: false
+	autoplay: true
+	parent: X
+	y: 335
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1
+	
+register-withdot = new LottieLayer
+	name: "register-withdot"
+	path: "images/register-withdot.json"
+	autoplay: false
+	autoplay: true
+	parent: X
+	y: 395
+	x: 12
+	loop: true
+	scale: 1
+	width: 70
+	speed: 1
+	direction: 1

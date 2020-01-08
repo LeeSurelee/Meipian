@@ -1,7 +1,7 @@
 {
   "orientation" : 0,
   "updateDelay" : 0.29999999999999999,
-  "designModeSelected" : 1,
+  "designModeSelected" : 0,
   "cachedDeviceHeight" : 667,
   "contentScale" : 1,
   "fullScreen" : false,
@@ -14,7 +14,7 @@
   "projectId" : "A2743399-ADA2-404D-AA9B-58A2CC45F8E2",
   "deviceOrientation" : 0,
   "selectedHand" : "",
-  "showBezel" : 0,
+  "showBezel" : false,
   "foldedCodeRanges" : [
 
   ],
