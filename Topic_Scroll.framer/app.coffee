@@ -41,7 +41,7 @@ full2.states =
 		opacity: 0
 	b:
 		opacity: 1
-states = [topwords, full, full1, full2]
+states = [topwords, full, full1, full2, bgimg]
 navi.stateSwitch('a')
 scroll = new ScrollComponent
 	parent: home
@@ -60,6 +60,13 @@ content.states =
 		y: 273
 	b:
 		y: 273 + 155
+		
+bgimg.states = 
+	a:
+		height: 290
+	b:
+		height: 290 + 155
+
 Fstate = 0
 fullclick.onClick ->
 	if full1.opacity == 1
@@ -77,15 +84,19 @@ scroll.onMove (event) ->
 	num = scroll.scrollY
 # 	print num
 	topwords.height = Utils.modulate(num,[155,0],[75,230],true)
+	bgimg.height = Utils.modulate(num,[255,0],[290,290+255],true)
 	full.y = Utils.modulate(num,[155,0],[244,399],true)
 	full1.opacity = Utils.modulate(num,[155,77],[1,0],true)
 	full2.opacity = Utils.modulate(num,[77,0],[0,1],true)
-	navi.opacity = Utils.modulate(num,[335,355],[0,1],true)
+	navi.opacity = Utils.modulate(num,[170,185],[0,1],true)
 	tabbg.opacity = Utils.modulate(num,[363,364],[0,1],true)
 	if num >= 364
 		tabs.y = num - 364
 	else
 		tabs.y = 0
+	if num >= 155 && num <= 364
+		wording.y = 91 - num + 155
+		full.y = 244 - num + 155
 
 tabs.onClick ->
 	scroll.scrollToPoint(y:364)
