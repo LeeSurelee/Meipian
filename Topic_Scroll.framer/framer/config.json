@@ -14,7 +14,7 @@
   "projectId" : "7C9A477A-3172-4FAB-AC3F-1D962052869A",
   "deviceOrientation" : 0,
   "selectedHand" : "",
-  "showBezel" : true,
+  "showBezel" : false,
   "foldedCodeRanges" : [
 
   ],

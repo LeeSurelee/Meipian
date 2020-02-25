@@ -46,6 +46,7 @@ scroll = new ScrollComponent
 	width: Screen.width
 	height: Screen.height
 	scrollHorizontal: false
+	mouseWheelEnabled: true
 # 	contentInset: top: 155
 scroll.placeBehind(navi)
 content.parent = scroll.content
@@ -90,12 +91,12 @@ scroll.onMove (event) ->
 # 	full1.opacity = Utils.modulate(num,[155,77],[1,0],true)
 # 	full2.opacity = Utils.modulate(num,[77,0],[0,1],true)
 	navi.opacity = Utils.modulate(num,[15,30],[0,1],true)
-	tabbg.opacity = Utils.modulate(num,[363,364],[0,1],true)
-	if num >= 364
-		tabs.y = num - 364
+	tabbg.opacity = Utils.modulate(num,[208 + contentHeight,209 + contentHeight],[0,1],true)
+	if num >= 209 + contentHeight
+		tabs.y = num - 209 - contentHeight
 	else
 		tabs.y = 0
-	if num >= 0 && num <= 364
+	if num >= 0 && num <= 209 + contentHeight
 		wording.y = 91 - num
 		full.y = 244 - num + contentHeight
 
