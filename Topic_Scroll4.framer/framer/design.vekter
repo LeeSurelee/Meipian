@@ -3010,7 +3010,7 @@
                         "left" : -82,
                         "locked" : false,
                         "name" : "tabbg",
-                        "opacity" : 0,
+                        "opacity" : 1,
                         "parentid" : "fLCFWGKdn",
                         "radius" : 0,
                         "radiusBottomLeft" : 0,

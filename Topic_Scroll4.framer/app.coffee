@@ -70,6 +70,7 @@ scroll.placeBehind(navi)
 content.parent = scroll.content
 content.y = 273
 content.x = 0
+content.clip = true
 # scroll.scrollY -= -155
 
 content.states = 
@@ -83,6 +84,21 @@ bgimg.states =
 		height: 290
 	b:
 		height: 290 + 155
+
+tabbgmask = new Layer
+	parent: tabbg
+	height: 290
+	width: Screen.width
+	image: bgimg.image
+	y: -64
+tabbgmask2 = new Layer
+	parent: tabbg
+	height: 64
+	width: Screen.width
+	backgroundColor: "#000"
+	opacity: 0.3
+tabbgmask.sendToBack()
+tabbg.clip = true
 
 Fstate = 0
 contentHeight = 0
