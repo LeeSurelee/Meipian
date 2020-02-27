@@ -70,7 +70,7 @@ scroll.placeBehind(navi)
 content.parent = scroll.content
 content.y = 273
 content.x = 0
-content.clip = true
+
 # scroll.scrollY -= -155
 
 content.states = 
