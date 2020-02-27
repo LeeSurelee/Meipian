@@ -90,7 +90,7 @@ scroll.onMove (event) ->
 # 	full.y = Utils.modulate(num,[155,0],[244,399],true)
 # 	full1.opacity = Utils.modulate(num,[155,77],[1,0],true)
 # 	full2.opacity = Utils.modulate(num,[77,0],[0,1],true)
-	navi.opacity = Utils.modulate(num,[15,30],[0,1],true)
+	navi.opacity = Utils.modulate(num,[15,65],[0,1],true)
 	tabbg.opacity = Utils.modulate(num,[208 + contentHeight,209 + contentHeight],[0,1],true)
 	if num >= 209 + contentHeight
 		tabs.y = num - 209 - contentHeight

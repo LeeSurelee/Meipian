@@ -2982,7 +2982,7 @@
                         "exportOptions" : [
 
                         ],
-                        "fillColor" : "rgba(90, 78, 61, 1.00)",
+                        "fillColor" : "hsl(0, 0%, 100%)",
                         "fillEnabled" : true,
                         "fillGradient" : {
                           "__class" : "LinearGradient",
@@ -3049,7 +3049,7 @@
                         "exportOptions" : [
 
                         ],
-                        "fillColor" : "rgba(255, 255, 255, 1.00)",
+                        "fillColor" : "rgba(255, 255, 255, 0.95)",
                         "fillEnabled" : true,
                         "fillGradient" : {
                           "__class" : "LinearGradient",
@@ -3562,7 +3562,7 @@
                 "left" : 0,
                 "locked" : false,
                 "name" : "tabs",
-                "opacity" : 0.90000000000000002,
+                "opacity" : 1,
                 "parentid" : "TOvYRbi5a",
                 "radius" : 0,
                 "radiusBottomLeft" : 0,
@@ -3824,7 +3824,7 @@
                 "exportOptions" : [
 
                 ],
-                "fillColor" : "hsla(0, 0%, 0%, 0.3)",
+                "fillColor" : "#1199EE",
                 "fillEnabled" : true,
                 "fillGradient" : {
                   "__class" : "LinearGradient",
@@ -3893,7 +3893,7 @@
                 "exportOptions" : [
 
                 ],
-                "fillColor" : "rgba(255, 255, 255, 1.00)",
+                "fillColor" : "#333333",
                 "fillGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
@@ -3989,10 +3989,10 @@
                       "data" : {
                         "emptyStyle" : [
                           "FONT:HelveticaNeue",
-                          "COLOR:hsl(0, 0%, 100%)",
                           "LETTERSPACING:0",
                           "LINEHEIGHT:1.2",
-                          "SIZE:18"
+                          "SIZE:18",
+                          "COLOR:#333333"
                         ]
                       },
                       "depth" : 0,
@@ -4008,11 +4008,6 @@
                         {
                           "length" : 8,
                           "offset" : 0,
-                          "style" : "COLOR:hsl(0, 0%, 100%)"
-                        },
-                        {
-                          "length" : 8,
-                          "offset" : 0,
                           "style" : "LETTERSPACING:0"
                         },
                         {
@@ -4024,6 +4019,11 @@
                           "length" : 8,
                           "offset" : 0,
                           "style" : "SIZE:18"
+                        },
+                        {
+                          "length" : 8,
+                          "offset" : 0,
+                          "style" : "COLOR:#333333"
                         }
                       ],
                       "key" : "6b8pb",
@@ -4032,7 +4032,7 @@
                     }
                   ],
                   "cached" : {
-                    "html" : "<span data-offset-key=\"6b8pb-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:18px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">镜头下的万千世界<\/span><\/span>",
+                    "html" : "<span data-offset-key=\"6b8pb-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:#333333;font-size:18px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">镜头下的万千世界<\/span><\/span>",
                     "os" : "10_15",
                     "size" : {
                       "height" : 21,
@@ -4060,7 +4060,7 @@
             "exportOptions" : [
 
             ],
-            "fillColor" : "rgba(90, 78, 61, 1.00)",
+            "fillColor" : "rgba(255, 255, 255, 0.95)",
             "fillEnabled" : true,
             "fillGradient" : {
               "__class" : "LinearGradient",
