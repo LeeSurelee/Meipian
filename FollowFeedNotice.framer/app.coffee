@@ -32,12 +32,14 @@ Utils.delay 2,->
 Utils.interval 6,->
 	if pop.states.current.name == "hide"
 		pop.stateCycle("show")
-	if pop.states.current.name == "show"
+	else if pop.states.current.name == "show"
 		pop.stateCycle('hide')
 
-Scroll.onScrollStart ->
+# Scroll.content.on "change:y", ->
+Scroll.onTouchStart ->
 	if pop.states.current.name == "show"
-		Utils.delay 1.5,->
+# 		print Utils.randomNumber(1,100)
+		Utils.delay 2,->
 			pop.stateCycle('hide')
 			
 pop.onClick ->
