@@ -8731,7 +8731,6 @@
                             "locked" : false,
                             "name" : "fakeFull",
                             "opacity" : 1,
-                            "originalFilename" : "",
                             "parentid" : "xIh3kFYvU",
                             "radius" : 0,
                             "radiusBottomLeft" : 0,
@@ -8791,7 +8790,6 @@
                         "locked" : false,
                         "name" : "fakeFull",
                         "opacity" : 0,
-                        "originalFilename" : "",
                         "parentid" : "Y2dZqixLs",
                         "radius" : 0,
                         "radiusBottomLeft" : 0,
@@ -9389,7 +9387,6 @@
                         "locked" : false,
                         "name" : "fakeIntent",
                         "opacity" : 0,
-                        "originalFilename" : "",
                         "parentid" : "cu2eycJ6v",
                         "radius" : 0,
                         "radiusBottomLeft" : 0,
@@ -18883,7 +18880,6 @@
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.071999999999999995,
                 "centerAnchorY" : 0.640625,
-                "clip" : false,
                 "colorable" : true,
                 "constraintsLocked" : false,
                 "contrast" : 100,
@@ -18950,7 +18946,6 @@
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.16800000000000001,
                 "centerAnchorY" : 0.640625,
-                "clip" : false,
                 "colorable" : true,
                 "constraintsLocked" : false,
                 "contrast" : 100,
@@ -19119,9 +19114,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 38,
-                "widthFactor" : null,
-                "x" : 188,
-                "y" : 44
+                "widthFactor" : null
               },
               {
                 "__class" : "FrameNode",
@@ -19309,9 +19302,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 337,
-                    "y" : 48
+                    "widthFactor" : null
                   }
                 ],
                 "clip" : false,
@@ -19487,9 +19478,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 73,
-                "widthFactor" : null,
-                "x" : 188,
-                "y" : 44
+                "widthFactor" : null
               }
             ],
             "clip" : false,

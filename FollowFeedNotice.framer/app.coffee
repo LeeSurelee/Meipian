@@ -1,7 +1,8 @@
 Framer.Defaults.Animation =
 	time: 0.8
 	curve: Spring(damping: 0.7)
-	
+# 	curve: Bezier.easeInOut	
+# 	curve: Bezier(.38,.68,.32,1.17)
 
 home.props =
 	width: 375
