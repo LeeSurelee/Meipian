@@ -1,7 +1,7 @@
 w = 1
 h = 1
 ratio = 0
-imaw2 = (Screen.width - 40)*2/3
+imaw2 = (Screen.width - 40)*4/5
 imaw25 = (Screen.width - 40)*5/6
 ima.image = Utils.randomImage()
 # ima.width = imaw2*1.1
