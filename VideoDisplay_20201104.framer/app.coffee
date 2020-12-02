@@ -1,8 +1,8 @@
 w = 1
 h = 1
 ratio = 0
-imaw2 = Screen.width*4/5
-imaw25 = (Screen.width - 40)*5/6
+imaw2 = (Screen.width-40)*9/7
+imaw25 = (Screen.width - 40)
 ima.image = Utils.randomImage()
 # ima.width = imaw2*1.1
 # # 		ima.width = imaw2/2.5
@@ -35,35 +35,27 @@ changepic = ->
 	wid.template =
 		w: Utils.round(ratio * 222)
 		h: Utils.round(222/ratio)
-	# Gamma values define rotation around the x-axis. Ranging from -180 and 180.
-# 	gamma.x = Utils.modulate(event.gamma, [-90, 90], [0, 80], true)
 	gammaValue.template = 
 # 		g: Utils.round(event.gamma)
 
 	# Move ball around.
 	ball.rotation = Utils.round(-alpha.rotation)
-# 	ball.midY = Utils.modulate(event.beta, [-90, 90], [0, container.height], true)
-# 	ball.midX = Utils.modulate(event.gamma, [-90, 90], [0, container.width], true)
 	if ratio >= 1 && ratio <= 16/9
 		ima.height = (-9/42*ratio+37/42)*imaw2
-# 			Utils.modulate(ratio,[1,16/9],[imaw2,335/16*9],true)
 		ima.width = (1/7*ratio + 11/21)*imaw2
-# 			Utils.modulate(ratio,[1,16/9],[imaw25,335],true)
 		displayIma()
+		
 	else if ratio > 16/9
-# 		ima.height = imaw2/2.5 
 		ima.height = imaw2*.5
 		ima.width = imaw2*7/9
 		displayIma()
 
 	else if ratio >= 9/16 && ratio < 1
 		ima.height = (-16/63*ratio + 58/63)*imaw2 
-		#Utils.modulate(ratio,[9/16,1],[imaw2*1.5,imaw2],true)
 		ima.width =  (8/21*ratio + 6/21)*imaw2 
-		#Utils.modulate(ratio,[9/16,1],[imaw2*1.1,imaw25],true)
 		displayIma()
+		
 	else if ratio < 9/16 
-# 		ima.width = imaw2/2.5
 		ima.height = imaw2*7/9
 		ima.width = imaw2*.5
 
