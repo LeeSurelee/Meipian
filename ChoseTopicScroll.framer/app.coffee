@@ -1,3 +1,9 @@
+home.props =
+	width: 375
+	height: 667
+	x: Align.center
+	y: Align.center
+
 scroll1 = ScrollComponent.wrap($1)
 scroll1.contentInset=
 	left: 15
