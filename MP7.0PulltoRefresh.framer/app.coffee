@@ -67,7 +67,7 @@ scroll_1.draggable.onDragEnd ->
 		Utils.delay Utils.randomNumber(2.5,4), ->
 			scroll_1.animate
 				y: headerHeight
-# 			soundRefresh.play()
+			soundRefresh.play()
 			Utils.delay 1, ->
 				customAnim.goToAndStop(0)
 	else
