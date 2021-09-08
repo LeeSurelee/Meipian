@@ -11,6 +11,12 @@ Framer.Defaults.Animation =
 # 	name: "customAnim"
 # 	path: "images/loading2.json"
 
+X.props =
+	width: 375
+	height: 667
+	x: Align.center
+	y: Align.center
+
 soundTab = new Audio("sounds/Tab1.m4a")
 soundRefresh = new Audio("sounds/Refresh.wav")
 
