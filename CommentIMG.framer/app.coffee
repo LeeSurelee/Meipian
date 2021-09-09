@@ -51,43 +51,17 @@ changepic = ->
 		ima.height = imaw2
 		ima.width = ima.height * w/h
 		displayIma()
+		
 	else if ratio <.4 && ratio >=1/3
 		ima.height = imaw2
 		ima.width = imaw2*ratio
 		displayIma()
+		
 	else if ratio < 1/3 
 		ima.height = imaw2
 		ima.width = imaw2/3
 		displayIma()
-# 		ima.width = ima.height/2
-# # 			Utils.modulate(ratio,[1/3,1/10],[imaw2/2.5,imaw25/2.5],true)
-# # 		ima.width = imaw2/2.5
-# 		ima.height = (-15/14*ratio + 19/14)*imaw2 *.5
-# 			Utils.modulate(ratio,[1/3,1/10],[imaw2,imaw25],true)
-		displayIma()
-# 	if ratio >= 1 && ratio <= 16/9
-# 		ima.width = (9/28*ratio + 13/14)*imaw2
-# # 			Utils.modulate(ratio,[1,16/9],[imaw25,335],true)
-# 		ima.height = (-45/224*ratio+269/224)*imaw2
-# # 			Utils.modulate(ratio,[1,16/9],[imaw2,335/16*9],true)
-# 		displayIma()
-# 	else if ratio > 16/9
-# # 		ima.height = imaw2/2.5 
-# 		ima.height = 335/16*9
-# 		ima.width = 335
-# 		displayIma()
-# 
-# 	else if ratio >= 9/16 && ratio < 1
-# 		ima.height = (-36/35*ratio + 71/35)*imaw2 
-# 		#Utils.modulate(ratio,[9/16,1],[imaw2*1.5,imaw2],true)
-# 		ima.width =  (12/35*ratio + 127/140)*imaw2 
-# 		#Utils.modulate(ratio,[9/16,1],[imaw2*1.1,imaw25],true)
-# 		displayIma()
-# 	else if ratio < 9/16 
-# 		ima.width = imaw2*1.1
-# # 		ima.width = imaw2/2.5
-# 		ima.height = imaw2*1.45
-# 		displayIma()
+		
 slider1num = 0
 slider2num = 0
 
