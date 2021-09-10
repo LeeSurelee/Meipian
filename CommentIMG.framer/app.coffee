@@ -4,9 +4,10 @@ ratio = 0
 imaw2 = (Screen.width - 42)/1.8
 imaw25 = (Screen.width - 40)*5/6
 ima.image = Utils.randomImage()
-ima.width = imaw2
+ima.width = 120
 # 		ima.width = imaw2/2.5
-ima.height = imaw2
+ima.height = 120
+action.y = ima.y + ima.height + 10 
 
 slider1 = new SliderComponent
 	y: 600
@@ -22,6 +23,7 @@ displayIma = ->
 	wid1.template =
 		w: Utils.round(ima.width)
 		h: Utils.round(ima.height)
+	action.y = ima.y + ima.height + 10 
 		
 changepic = ->
 	ratio = w/h
@@ -37,29 +39,24 @@ changepic = ->
 
 	ball.rotation = Utils.round(-alpha.rotation)
 
-	if ratio >= 1 && ratio <= 2.5
-		ima.width = imaw2
-		ima.height = ima.width * h/w
-		displayIma()
-
-	else if ratio > 2.5
+	if ratio > 2.5
 		ima.height = ima.width / 2.5
 		ima.width = imaw2
 		displayIma()
-		
-	else if ratio >= .4 && ratio < 1
-		ima.height = imaw2
-		ima.width = ima.height * w/h
+
+	else if ratio >= 1 && ratio <= 2.5
+		ima.width = 130/3*ratio + 230/3
+		ima.height = ima.width/ratio
 		displayIma()
 		
-	else if ratio <.4 && ratio >=1/3
-		ima.height = imaw2
-		ima.width = imaw2*ratio
+	else if ratio >= 1/2 && ratio < 1
+		ima.width = 54*ratio + 66
+		ima.height = ima.width/ratio
 		displayIma()
-		
-	else if ratio < 1/3 
+
+	else if ratio < 1/2
 		ima.height = imaw2
-		ima.width = imaw2/3
+		ima.width = imaw2/2
 		displayIma()
 		
 slider1num = 0

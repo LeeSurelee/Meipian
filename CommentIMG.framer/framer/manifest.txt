@@ -1,5 +1,7 @@
 app.coffee
 index.html
+images/design/x2O0R5tFy1vF3JDlZOn6Us3xfQbzytZk4U0RzUunml44jlyTGCz16wlj2NHoLNKoGlO8GJbPwLe7QlCruw.png
+images/design/Ex871x7jWCHChnXxhbjOrgFwj6Vd9zmoNNE9YJEcfXubjfN9V8own3AFnK5ReXvyGSjl5eDDg4etmATQtRw.png
 images/2018-07-06 at 1.48 PM.gif
 framer/preview.png
 framer/manifest.txt
